@@ -26,23 +26,18 @@ const DropDownDefence = (props) => {
   const { title } = props.route.params;
   props.navigation.setOptions({ title: title });
   let arr = defenceDataARMY.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr1 = defenceDataPAF.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr2 = defenceDataNAVY.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr3 = defenceDataPOLICE.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr4 = defenceDataMOD.map(function (d) {
-    console.log(d);
     return d;
   });
 
@@ -93,7 +88,7 @@ const DropDownDefence = (props) => {
       </ScrollView>
       <View style={styles.adds}>
         <BannerAd
-          unitId={TestIds.BANNER}
+          unitId="ca-app-pub-7992663111948996/5364535029"
           size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
         />
       </View>

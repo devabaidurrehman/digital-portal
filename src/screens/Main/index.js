@@ -48,7 +48,6 @@ const Main = (props) => {
     });
   };
   let arr = data.map(function (d) {
-    console.log(d);
     return d;
   });
 
@@ -59,14 +58,10 @@ const Main = (props) => {
       style={styles.renderItemView}
     >
       <TouchableOpacity
-        // style={{backgroundColor : 'blue'}}
         onPress={() =>
           props.navigation.navigate(item.screen, { title: item.source })
         }
-        //onPress={() => props.navigation.navigate(item.source)}
-        //style={{ backgroundColor: "white", margin: -7, borderRadius: 10 }}
       >
-        {/*<Image source={item.img} style={styles.renderItemImage} />*/}
         <LinearGradient
           colors={["rgba(0,0,0,0)", "rgba(0,0,0,1)"]}
           style={styles.gradientContainer}
@@ -80,12 +75,11 @@ const Main = (props) => {
     <View style={styles.container}>
       <View style={styles.textHeader}>
         <Text style={styles.topHeading1}>Welcome To</Text>
-        <Text style={styles.topHeading2}>DIGITAL SERVICES PORTAL</Text>
+        <Text style={styles.topHeading2}>DIGITAL SERVICES PAKISTAN</Text>
       </View>
-      
       {!isOffline ? (
         <FlatList
-          style={{ alignSelf: "center", }}
+          style={{ alignSelf: "center" }}
           data={arr}
           numColumns={3}
           renderItem={renderItem}
@@ -94,12 +88,10 @@ const Main = (props) => {
       ) : (
         <Text style={styles.message}>No Internet!</Text>
       )}
-      <View style={styles.adds}>
-        <BannerAd
-          unitId='ca-app-pub-7992663111948996/5364535029'
-          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-        />
-      </View>
+      <BannerAd
+        unitId="ca-app-pub-7992663111948996/5364535029"
+        size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+      />
     </View>
   );
 };
@@ -107,19 +99,13 @@ const Main = (props) => {
 export default Main;
 const styles = StyleSheet.create({
   container: {
-    // width: width,
-    // height: height,
     justifyContent: "space-between",
     flex: 1,
-    //margin: 10,
-    // marginTop: "7%",
   },
   renderItemView: {
-    //backgroundColor: COLOR_LIGHT_BLUE,
     margin: 4,
     marginTop: 16,
     marginBottom: 4,
-    //padding: 15,
     width: width / 3.4,
     borderRadius: 10,
     height: 140,
@@ -139,7 +125,6 @@ const styles = StyleSheet.create({
   },
   renderItemText: {
     fontSize: 13,
-    //fontFamily: "serif",
     color: COLOR_WHITE,
     margin: 4,
     marginBottom: 8,
@@ -165,9 +150,9 @@ const styles = StyleSheet.create({
   textHeader: {
     paddingLeft: "5%",
     backgroundColor: PAK_GOVT_GREEN_COLOR,
-    height: "10%",
+    height: height / 7,
     justifyContent: "center",
-    paddingTop: "2%",
+    paddingTop: "8%",
   },
   message: {
     alignSelf: "center",
@@ -176,12 +161,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: PAK_GOVT_GREEN_COLOR,
     marginBottom: "70%",
-  },
-  adds: {
-    width: "100%",
-    height: 60,
-    position: "absolute",
-    bottom: 0,
-   zIndex:1
   },
 });

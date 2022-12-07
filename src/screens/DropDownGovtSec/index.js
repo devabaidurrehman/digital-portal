@@ -32,43 +32,33 @@ const DropDownGovtSec = (props) => {
   const { title } = props.route.params;
   props.navigation.setOptions({ title: title });
   let arr = govtSecDriving.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr1 = govtSecExciseTaxation.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr2 = govtSecNadra.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr3 = govtSecPassport.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr4 = govtSecVisa.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr5 = govtSecMOFA.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr6 = govtSecFBR.map(function (d) {
-    console.log(d);
     return d;
   });
   let arr7 = govtSecCustom.map(function (d) {
-    console.log(d);
     return d;
   });
   const nav = (selected, title) => {
     props.navigation.navigate("WebViewScreen", { selected, title });
   };
-  // const navScree = () =>{
-  //   props.navigation.navigate("We",{})
-  // }
+
   return (
     <>
       <ScrollView>
@@ -133,12 +123,10 @@ const DropDownGovtSec = (props) => {
           />
         </View>
       </ScrollView>
-      <View style={styles.adds}>
-        <BannerAd
-          unitId={TestIds.BANNER}
-          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-        />
-      </View>
+      <BannerAd
+        unitId="ca-app-pub-7992663111948996/5364535029"
+        size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+      />
     </>
   );
 };
@@ -147,13 +135,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     margin: "3%",
-  },
-  adds: {
-    width: "100%",
-    height: 60,
-    position: "absolute",
-    bottom: 0,
-    zIndex: 1,
   },
 });
 

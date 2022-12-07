@@ -44,49 +44,41 @@ const General = (props) => {
     switch (title) {
       case "Education":
         arr = educationData.map(function (d) {
-          console.log(d);
           return d;
         });
         break;
       case "Utility Bills":
         arr = utilityServicesData.map(function (d) {
-          console.log(d);
           return d;
         });
         break;
       case "Jobs":
         arr = jobData.map(function (d) {
-          console.log(d);
           return d;
         });
         break;
       case "Courier Tracking":
         arr = deliveryServicesData.map(function (d) {
-          console.log(d);
           return d;
         });
         break;
       case "Govt. Initiatives":
         arr = govtInitiativesData.map(function (d) {
-          console.log(d);
           return d;
         });
         break;
       case "Board Results":
         arr = boardsResultsData.map(function (d) {
-          console.log(d);
           return d;
         });
         break;
       case "Railways":
         arr = railwaysData.map(function (d) {
-          console.log(d);
           return d;
         });
         break;
       case "Bus Tickets":
         arr = busTicketData.map(function (d) {
-          console.log(d);
           return d;
         });
         break;
@@ -105,7 +97,6 @@ const General = (props) => {
             title: item.services,
           })
         }
-        //style={{ backgroundColor: "white", margin: -7, borderRadius: 10 }}
       >
         <Image source={item.img} style={styles.renderItemImage} />
         <Text style={styles.renderItemText}>{item.services}</Text>
@@ -121,12 +112,10 @@ const General = (props) => {
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
-      <View style={styles.adds}>
-        <BannerAd
-          unitId={TestIds.BANNER}
-          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-        />
-      </View>
+      <BannerAd
+        unitId="ca-app-pub-7992663111948996/5364535029"
+        size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+      />
     </View>
   );
 };
@@ -136,23 +125,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    // margin: 10,
   },
   renderItemView: {
-    // backgroundColor: COLOR_LIGHT_BLUE,
     borderWidth: 1,
     borderColor: PAK_GOVT_YELLOW_COLOR,
     margin: "4%",
     padding: "3%",
-    // marginTop: 18,
     width: "42%",
     borderRadius: 15,
   },
   renderItemImage: { width: 70, height: 70, alignSelf: "center" },
   renderItemText: {
     fontSize: 12,
-    // fontWeight: "bold",
-    // fontFamily: "serif",
     color: COLOR_BLACK,
     alignSelf: "center",
     marginTop: "8%",
@@ -166,18 +150,9 @@ const styles = StyleSheet.create({
   },
   renderItemText2: {
     fontSize: 8,
-    // fontWeight: "bold",
-    // fontFamily: "serif",
     fontStyle: "italic",
     color: COLOR_GRAY,
     alignSelf: "center",
     marginTop: "4%",
-  },
-  adds: {
-    width: "100%",
-    height: 60,
-    position: "absolute",
-    bottom: 0,
-    zIndex: 1,
   },
 });

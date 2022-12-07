@@ -9,7 +9,6 @@ import {
 
 const WebViewScreen = (props) => {
   const { selected, title } = props.route.params;
-  // const { title } = props.route.params;
   props.navigation.setOptions({ title: title });
   return (
     <View style={styles.container}>
@@ -29,12 +28,10 @@ const WebViewScreen = (props) => {
           />
         )}
       />
-      <View style={styles.adds}>
-        <BannerAd
-          unitId={TestIds.BANNER}
-          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-        />
-      </View>
+      <BannerAd
+        unitId="ca-app-pub-7992663111948996/5364535029"
+        size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+      />
     </View>
   );
 };
@@ -44,12 +41,5 @@ export default WebViewScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  adds: {
-    width: "100%",
-    height: 60,
-    position: "absolute",
-    bottom: 0,
-    zIndex: 1,
   },
 });
