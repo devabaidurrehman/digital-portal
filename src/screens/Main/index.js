@@ -82,9 +82,10 @@ const Main = (props) => {
         <Text style={styles.topHeading1}>Welcome To</Text>
         <Text style={styles.topHeading2}>DIGITAL SERVICES PORTAL</Text>
       </View>
+      
       {!isOffline ? (
         <FlatList
-          style={{ alignSelf: "center" }}
+          style={{ alignSelf: "center", }}
           data={arr}
           numColumns={3}
           renderItem={renderItem}
@@ -181,6 +182,6 @@ const styles = StyleSheet.create({
     height: 60,
     position: "absolute",
     bottom: 0,
-    zIndex: 1,
+   zIndex:1
   },
 });
