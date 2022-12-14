@@ -6,11 +6,6 @@
     "orientation": "portrait",
     "icon": "./assets/dp_logo.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -18,22 +13,21 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.app.digitalportal"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/dp_logo.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.app.digitalportal"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/dp_logo.png"
     },
     "extra": {
-      "eas": {
-        "projectId": "53ccecbe-bf19-47aa-9969-cac66565907b"
-      }
+     
     }
   },
   "react-native-google-mobile-ads": {
