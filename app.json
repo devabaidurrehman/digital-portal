@@ -21,13 +21,16 @@
         "foregroundImage": "./assets/dp_logo.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.app.digitalportal"
+      "package": "com.app.digitalportal",
+      "versionCode":2
     },
     "web": {
       "favicon": "./assets/dp_logo.png"
     },
     "extra": {
-     
+      "eas": {
+        "projectId": "8ff5b706-a4e3-4948-bbc0-2af1e787b566"
+      }
     }
   },
   "react-native-google-mobile-ads": {

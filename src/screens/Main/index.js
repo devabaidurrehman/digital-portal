@@ -75,7 +75,7 @@ const Main = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.textHeader}>
-        <Text style={styles.topHeading1}>Welcome To</Text>
+        <Text style={styles.topHeading}>Welcome To</Text>
         <Text style={styles.topHeading2}>DIGITAL SERVICES PAKISTAN</Text>
       </View>
       {!isOffline ? (
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     margin: 4,
     marginBottom: 8,
   },
-  topHeading1: {
+  topHeading: {
     fontFamily: "sans-serif",
     fontSize: 15,
     color: PAK_GOVT_YELLOW_COLOR,
